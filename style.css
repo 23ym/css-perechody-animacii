@@ -41,6 +41,89 @@ body {
   font-size: 1.1rem;
 }
 
+
+.box1 {
+  margin: 30px 0;
+  width: 150px;
+  height: 150px;
+  background-color: darkorange;
+  border-radius: 12px;
+}
+
+.move-xy {
+  animation-name: move;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+  animation-iteration-count: infinite; /* анімація відбувається постійно */
+  animation-direction: alternate; /* рух анімації - плавне повернення в стартову точку */
+
+  /* або скорочений варіант */
+  /* animation: move 3s ease-out 2s infinite alternate; */
+}
+
+@keyframes move {
+  from {
+    translate: 0px 0px; /* починаючи з (стартова позиція)*/
+  }
+  to {
+    translate: 70px 100px; /* зміщення 70px по осі X і на 100px по осі Y */
+  }
+}
+
+/*********************************************/
+
+.move-x {
+  background-color: burlywood;
+  margin-top: 130px;
+  animation: moveX 3s ease-in-out 0s infinite alternate;
+}
+
+@keyframes moveX {
+  from {
+    translate: 0px; /* починаючи з (стартова позиція) */
+  }
+  to {
+    translate: 100%; /* 100% ширини */
+  }
+}
+
+/*********************************************/
+
+.scale {
+  margin-top: 60px;
+  animation: size 2s ease-in-out 0s infinite alternate;
+}
+
+@keyframes size {
+  from {
+    scale: 1; /* починаючи з 100% від вихідного розміру */
+    background-color: violet;
+  }
+  to {
+    scale: 1.2; /* збільшення на 20% від вихідного розміру */
+    background-color: darkmagenta;
+  }
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: calc(50% - 50px);
+  margin-top: 50px;
+  border: 10px solid lightgrey;
+  border-right-color: green;
+  animation: rotate 2s linear 0s infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 .btn {
   padding: 20px;
   font-size: 1.4rem;
