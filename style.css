@@ -6,6 +6,7 @@ body {
   margin: 30px 0;
   width: 200px;
   height: 200px;
+  cursor: pointer;
   background-color: darkorange;
   transition-property: all; /* може бути - background-color, що змінюється при наведенні курсора */
   transition-duration: 0.8s; /* час, на протязі якого відбувається зміна */
@@ -132,6 +133,7 @@ body {
   border-radius: 10px;
   transform: all 0.8s linear;
   transition-delay: 0.4s;
+  cursor: pointer;
 }
 
 .btn:hover {
